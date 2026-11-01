@@ -1,0 +1,64 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "os": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "logical_cpus": 9,
+    "visible_ram_mib": 9967,
+    "scope": "shared execution environment, NOT user's laptop",
+    "date_utc": "2026-10-29T16:37:27Z"
+  },
+  "method": "single run per size; time measures import only; OS high-water RSS in isolated Linux process includes generated input, baseline and DB; no load test or production SLA",
+  "runs": [
+    {
+      "rows": 1000,
+      "input_bytes": 61162,
+      "seconds": 0.041,
+      "baseline_rss_mib": 11.75,
+      "peak_rss_mib": 14.71,
+      "memory_method": "Linux getrusage ru_maxrss (KiB)",
+      "correct": true,
+      "counts": {
+        "total": 1000,
+        "accepted": 894,
+        "rejected": 53,
+        "duplicated": 53
+      },
+      "expected_total_cents": 9849650,
+      "actual_total_cents": 9849650
+    },
+    {
+      "rows": 10000,
+      "input_bytes": 621109,
+      "seconds": 0.4701,
+      "baseline_rss_mib": 11.88,
+      "peak_rss_mib": 25.38,
+      "memory_method": "Linux getrusage ru_maxrss (KiB)",
+      "correct": true,
+      "counts": {
+        "total": 10000,
+        "accepted": 8941,
+        "rejected": 529,
+        "duplicated": 530
+      },
+      "expected_total_cents": 98572325,
+      "actual_total_cents": 98572325
+    },
+    {
+      "rows": 50000,
+      "input_bytes": 3149762,
+      "seconds": 3.3142,
+      "baseline_rss_mib": 11.88,
+      "peak_rss_mib": 76.18,
+      "memory_method": "Linux getrusage ru_maxrss (KiB)",
+      "correct": true,
+      "counts": {
+        "total": 50000,
+        "accepted": 44706,
+        "rejected": 2647,
+        "duplicated": 2647
+      },
+      "expected_total_cents": 492876950,
+      "actual_total_cents": 492876950
+    }
+  ]
+}
